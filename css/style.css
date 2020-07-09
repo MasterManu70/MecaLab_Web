@@ -54,7 +54,6 @@ body{
     margin-right:auto;
    /* border: 1px solid rgb(20, 220, 20);*/
 }
-
 label,input{
     margin: 5px 0;
     margin-left: 5px;
@@ -118,6 +117,10 @@ td{
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     text-align: justify;
+}
+#registros{
+    font-size: 22px;
+    text-align: center;
 }
 /*Pie*/
 footer{

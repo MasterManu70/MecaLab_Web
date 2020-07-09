@@ -1,19 +1,25 @@
 <?php
-$conexion = mysqli_connect('localhost', 'root', '', 'mecalab') or die("Error de conexion al servidor");
+include_once('includes/conexion.php');
 
-$buscar= $_GET['buscar'];
-$buscar = filter_var($buscar, FILTER_SANITIZE_STRING);
+conectar();
 
-$query = "SELECT id, articulo, comentario, disponible FROM articulos WHERE articulo LIKE '%" . $buscar . "'";
+if ($_POST) {
+    $buscar = $_POST['buscar'];
+    $query = "SELECT id, articulo, comentario, disponible FROM articulos WHERE articulo LIKE '%" . $buscar . "%' ORDER BY articulo";
+    $registro = mysqli_query($conexion, $query);
+} else {
+    $query = "SELECT id, articulo, comentario, disponible FROM articulos";
+    $registro = mysqli_query($conexion, $query);
+}
 
-$registro = mysqli_query($conexion, $query);
+desconectar();
 ?>
 <?php include 'includes/header.php' ?>
 <div class="contenedor">
     <div class="row">
-        <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> method="GET" id="formularioBusqueda">
+        <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST" id="formularioBusqueda">
             <h3 id="tituloTabla1">Motor de busqueda</h3>
-            <label>Buscar: <input type="search" name="buscar" id="buscar"> <input type="submit" value="Buscar" id="btnBuscar"></label>
+            <label>Artículo: <input type="search" name="buscar" id="buscar"> <input type="submit" value="Buscar" id="btnBuscar"></label>
         </form>
         <div class="row">
             <div id="formularioTabla">
@@ -25,21 +31,25 @@ $registro = mysqli_query($conexion, $query);
                         <th>Comentarios</th>
                         <th>Disponibilidad</th>
                     </tr>
-                    <!--Demostrativo-->
                     <?php
-                    while ($mostrar = mysqli_fetch_array($registro)) { ?>
-                        <tr>
-                            <td><?php echo $mostrar['id']; ?></td>
-                            <td><?php echo $mostrar['articulo']; ?></td>
-                            <td><?php echo $mostrar['comentario']; ?></td>
-                            <td><?php if($mostrar['disponible']==1)
-                            {echo 'Disponible';
-                            }else 
-                            {echo 'No disponible';}
-                            ?></td>
-                        </tr>
-                    <?php } ?>
-                    <!--Fin Demostrativo-->
+                    if (!empty($registro) and mysqli_num_rows($registro) > 0) {
+                        while ($mostrar = mysqli_fetch_array($registro)) {
+                    ?>
+                            <tr>
+                                <td><?php echo $mostrar['id']; ?></td>
+                                <td><?php echo $mostrar['articulo']; ?></td>
+                                <td><?php echo $mostrar['comentario']; ?></td>
+                                <td><?php if ($mostrar['disponible'] == 1) {
+                                        echo 'Disponible';
+                                    } else {
+                                        echo 'No disponible';
+                                    }
+                                    ?></td>
+                            </tr>
+                        <?php }
+                    } else { 
+                        echo '<td colspan="4" style="text-align: center;"><b>No se encontraron registros</b></td>';
+                     } ?>
                 </table>
             </div>
         </div>
