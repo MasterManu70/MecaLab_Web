@@ -13,7 +13,7 @@
             <img src="images/LogoMecalab.png" id="logo">
         </div>
         <div id="titulocabecera">
-            <label>Sistema de consulta laboratorio Mecatronica</label>
+            <label>Sistema de consulta laboratorio Mecatronica UTH</label>
         </div>
     </div>
 </header>
