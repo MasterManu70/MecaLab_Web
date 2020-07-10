@@ -5,10 +5,10 @@ conectar();
 
 if ($_POST) {
     $buscar = $_POST['buscar'];
-    $query = "SELECT id, articulo, comentario, disponible FROM articulos WHERE articulo LIKE '%" . $buscar . "%' ORDER BY articulo";
+    $query = "SELECT articulo,COUNT(articulo) disponibles FROM articulos WHERE status = 1 AND disponible =1 AND articulo LIKE '%".$buscar."%'GROUP BY articulo";
     $registro = mysqli_query($conexion, $query);
 } else {
-    $query = "SELECT id, articulo, comentario, disponible FROM articulos";
+    $query = "SELECT articulo,COUNT(articulo) disponibles FROM articulos WHERE status = 1 AND disponible =1 GROUP BY articulo";
     $registro = mysqli_query($conexion, $query);
 }
 
@@ -26,9 +26,7 @@ desconectar();
                 <h3 id="tituloTabla2">Artículos</h3>
                 <table>
                     <tr>
-                        <th>Codigo</th>
-                        <th>Artículo</th>
-                        <th>Comentarios</th>
+                        <th style="   width: 400px;">Artículo</th>
                         <th>Disponibilidad</th>
                     </tr>
                     <?php
@@ -36,13 +34,11 @@ desconectar();
                         while ($mostrar = mysqli_fetch_array($registro)) {
                     ?>
                             <tr>
-                                <td><?php echo $mostrar['id']; ?></td>
                                 <td><?php echo $mostrar['articulo']; ?></td>
-                                <td><?php echo $mostrar['comentario']; ?></td>
-                                <td><?php if ($mostrar['disponible'] == 1) {
-                                        echo 'Disponible';
+                                <td><?php if ($mostrar['disponibles'] > 1) {
+                                        echo $mostrar['disponibles'].' Disponibles';
                                     } else {
-                                        echo 'No disponible';
+                                        echo $mostrar['disponibles'].' Disponible';
                                     }
                                     ?></td>
                             </tr>
