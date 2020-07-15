@@ -1,20 +1,4 @@
-<?php
-include_once('includes/conexion.php');
-
-conectar();
-
-if ($_POST) {
-    $buscar = $_POST['buscar'];
-    $query = "SELECT articulo,COUNT(articulo) disponibles FROM articulos WHERE status = 1 AND disponible =1 AND articulo LIKE '%".$buscar."%'GROUP BY articulo";
-    $registro = mysqli_query($conexion, $query);
-} else {
-    $query = "SELECT articulo,COUNT(articulo) disponibles FROM articulos WHERE status = 1 AND disponible =1 GROUP BY articulo";
-    $registro = mysqli_query($conexion, $query);
-}
-
-desconectar();
-?>
-<?php include 'includes/header.php' ?>
+<?php include 'header.php' ?>
 <div class="contenedor">
     <div class="row">
         <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST" id="formularioBusqueda">
@@ -44,11 +28,11 @@ desconectar();
                             </tr>
                         <?php }
                     } else { 
-                        echo '<td colspan="4" style="text-align: center;"><b>No se encontraron registros</b></td>';
+                        echo '<td colspan="2" style="text-align: center;"><b>No se encontraron registros</b></td>';
                      } ?>
                 </table>
             </div>
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php' ?>
+<?php include 'footer.php' ?>
