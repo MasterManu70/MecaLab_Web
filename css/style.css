@@ -142,9 +142,9 @@ footer{
     padding-top: 25px;
 }
 /*Resonsivo beta*/
-@media screen and (max-width: 411px) {
+@media (min-width:320px) and (max-width: 768px) {
     #logo{
-        width: 100px;
+        width: 80px;
         height: 60px;
         padding-top: 10px;
     }
@@ -174,21 +174,21 @@ footer{
         font-size: 9px;
     }
 }
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px){
     #logo{
         width: 100px;
         height: 60px;
         padding-top: 10px;
     }
     #titulocabecera,#titulopie{
-        font-size: 9px;
+        font-size: 16px;
         padding-top: 30px;
     }
     #tituloTabla1,#tituloTabla2{
-        font-size: 12px;
+        font-size: 16px;
     }
     #formularioBusqueda {
-        width: 300px;
+        width: 750px;
         font-size: 12px;
     }
     #buscar{
@@ -197,12 +197,13 @@ footer{
         height: 25px;
     }
     #btnBuscar{
-        font-size: 8px;
+        font-size:12px;
         width: 80px;
         height: 25px;
     }
     #formularioTabla, Table,th,td,.contenedor{
-        width: 300px;
+        width: 750px;
         font-size: 9px;
     }
 }
+
