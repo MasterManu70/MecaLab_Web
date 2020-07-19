@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/LabMeca.ico" type="image/x-icon">
     <title>Sistema de consulta</title>
 </head>
+
 <header>
     <div class="row">
         <div>
@@ -18,5 +19,6 @@
         </div>
     </div>
 </header>
+
 
 <body>

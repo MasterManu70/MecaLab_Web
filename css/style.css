@@ -122,6 +122,10 @@ td{
     font-size: 22px;
     text-align: center;
 }
+/*Nota*/
+#nota{
+    text-align: center;
+}
 /*Pie*/
 footer{
     clear: both;
@@ -203,7 +207,7 @@ footer{
     }
     #formularioTabla, Table,th,td,.contenedor{
         width: 750px;
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 
