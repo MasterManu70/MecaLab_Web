@@ -3,7 +3,7 @@
 <h3 id="tituloTabla2">Artículos</h3>
 <table>
     <tr>
-        <th style="   width: 400px;">Artículo</th>
+        <th style="width: 750px;">Artículo</th>
         <th>Disponibilidad</th>
     </tr>
     <?php mostrarRegistros($registro); ?>

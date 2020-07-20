@@ -104,6 +104,7 @@ table{
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
 }
 th{
     font-size: 18px;
@@ -173,8 +174,11 @@ footer{
         width: 80px;
         height: 25px;
     }
-    #formularioTabla, Table,th,td,.contenedor{
+    #formularioTabla, .contenedor{
         width: 300px;
+        font-size: 9px;
+    }
+    th,tr{
         font-size: 9px;
     }
 }
@@ -205,9 +209,47 @@ footer{
         width: 80px;
         height: 25px;
     }
-    #formularioTabla, Table,th,td,.contenedor{
+    #formularioTabla, .contenedor{
         width: 750px;
         font-size: 12px;
+    }
+    th,tr{
+        font-size: 10px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1366px){
+    #logo{
+        width: 100px;
+        height: 60px;
+        padding-top: 10px;
+    }
+    #titulocabecera,#titulopie{
+        font-size: 16px;
+        padding-top: 30px;
+    }
+    #tituloTabla1,#tituloTabla2{
+        font-size: 16px;
+    }
+    #formularioBusqueda {
+        width: 750px;
+        font-size: 12px;
+    }
+    #buscar{
+        font-size: 12px;
+        width: 290px;
+        height: 25px;
+    }
+    #btnBuscar{
+        font-size:12px;
+        width: 80px;
+        height: 25px;
+    }
+    #formularioTabla,.contenedor{
+        width: 750px;
+        font-size: 12px;
+    }
+    th,tr{
+        font-size: 11px;
     }
 }
 

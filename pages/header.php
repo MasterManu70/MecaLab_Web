@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/LabMeca.ico" type="image/x-icon">
-    <title>Sistema de consulta</title>
+    <title>Laboratorio de Mecatronica UTH</title>
 </head>
 
 <header>
