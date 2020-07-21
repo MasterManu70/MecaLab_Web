@@ -1,4 +1,4 @@
-<?php include_once "busqueda.php";?>
+<?php include_once "busqueda.php"; ?>
 
 <h3 id="tituloTabla2">Artículos</h3>
 <table>
