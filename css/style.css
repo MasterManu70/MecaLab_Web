@@ -38,6 +38,7 @@ header{
 /*Imagen de fondo*/
 body{
     background-color: rgb(60, 206, 123);
+    /*background-color: whitesmoke;*/
     display: flex;
     min-height: 100vh;
     flex-wrap: wrap;
