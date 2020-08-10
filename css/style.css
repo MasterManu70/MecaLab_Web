@@ -10,10 +10,8 @@ header{
     width: 100%;
     height: 80px;
     background-color: rgb(59, 173, 109);
-    opacity: 95%;
-   box-shadow: 0px 0px 5px rgb(0, 0, 0);
-   margin-bottom: 20px;
-
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    margin-bottom: 5px;
 }
 #logo{
     float: left;
@@ -48,15 +46,16 @@ body{
     clear: both;   
     margin-left: auto;
     margin-right: auto;
-    width: 1366px;  
+    width: 80%;  
     border-radius: 10px;
     background-color:white;
     box-shadow: 0px 3px 5px rgb(0, 0, 0);
+    padding-bottom: 20%;
     opacity: 90%;
 }
 /*Formulario Busqueda*/
 #formularioBusqueda{
-    width: 1354px;
+    width: 100%;
     margin: 5px;
     margin-left: auto;
     margin-right:auto;
@@ -92,7 +91,7 @@ label,input{
 }
 /*Formulario Tabla*/
 #formularioTabla{
-    width: 1354px;
+    width: 100%;
     margin: 5px;
     margin-left: auto;
     margin-right:auto;
@@ -144,10 +143,9 @@ footer{
     float: left;
     width: 100%;
     height: 80px;
-    opacity: 95%;
     background-color: rgb(59, 173, 109);
-    margin-top: 20px;
     box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    margin-top: 5px;
     align-self: flex-end;
 }
 #titulopie{
@@ -171,8 +169,8 @@ footer{
     }
     #titulocabecera{
         padding-top: 20px;
-        width: 150px;
-        font-size: 12px;
+        width: 50%;
+        font-size: 12px;    
         text-align: justify;
     }
     #titulopie{
@@ -183,21 +181,26 @@ footer{
         font-size: 12px;
     }
     #formularioBusqueda {
-        width: 300px;
+        width: 100%;
         font-size: 12px;
     }
     #buscar{
         font-size: 12px;
-        width: 290px;
+        width: 40%;
         height: 25px;
     }
     #btnBuscar{
-        font-size: 8px;
+        font-size: 10px;
         width: 80px;
         height: 25px;
     }
-    #formularioTabla, .contenedor{
-        width: 300px;
+    #formularioTabla{
+        width: 100%;
+        font-size: 9px;
+    } 
+    .contenedor{
+        width: 90%;
+        padding-bottom: 30%;
         font-size: 9px;
     }
     th,tr{
@@ -227,7 +230,7 @@ footer{
         font-size: 16px;
     }
     #formularioBusqueda {
-        width: 750px;
+        width: 100%;
         font-size: 12px;
     }
     #buscar{
@@ -240,8 +243,13 @@ footer{
         width: 80px;
         height: 25px;
     }
-    #formularioTabla, .contenedor{
-        width: 750px;
+    #formularioTabla{
+        width: 100%;
+        font-size: 12px;
+    } 
+    .contenedor{
+        width: 90%;
+        padding-bottom: 30%;
         font-size: 12px;
     }
     th,tr{
@@ -266,7 +274,7 @@ footer{
         font-size: 16px;
     }
     #formularioBusqueda {
-        width: 750px;
+        width: 100%;
         font-size: 12px;
     }
     #buscar{
@@ -279,8 +287,13 @@ footer{
         width: 80px;
         height: 25px;
     }
-    #formularioTabla,.contenedor{
-        width: 750px;
+    #formularioTabla{
+        width: 100%;
+        font-size: 12px;
+    } 
+    .contenedor{
+        width: 90%;
+        padding-bottom: 30%;
         font-size: 12px;
     }
     th,tr{
